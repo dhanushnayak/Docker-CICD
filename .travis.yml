@@ -4,3 +4,10 @@ services:
 script:
   - docker build -t dhnaush1/node .
   - docker images dhnaush1/node
+before_deploy:
+  - docker login -u dhanush1 -p Dhanushp@1
+deploy:
+  provider: script
+  script: docker push dhanush1/node
+  on:
+    branch: master
