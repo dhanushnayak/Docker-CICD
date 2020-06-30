@@ -1,0 +1,6 @@
+sudo: required
+services: 
+  - docker
+script:
+  - docker build -t dhnaush1/node .
+  - docker images dhnaush1/node
